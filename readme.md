@@ -26,41 +26,46 @@ Ensure you have the following installed on your machine:
 
    ```bash
    git clone https://github.com/Mohitgoswami18/GraphLibrary.git
+   ```
 2. Navigate to the project directory:
    ```bash
      cd GraphLibrary
+   ```
 3. If you're using CMake, run the following commands to build:
    ```bash
     mkdir build
     cd build
     cmake ..
     make
+   ```
 
 4. Using Without CMake
-If you prefer not to use CMake for building the library, you can directly compile the source files. Follow the steps below:
+   If you prefer not to use CMake for building the library, you can directly compile the source files. Follow the steps below:
 
-## A. Include the graph.hpp file: In your project, make sure to include the graph.hpp file that defines the graph class and its methods.
+      **A. Include the graph.hpp file**: In your project, make sure to include the graph.hpp file that defines the graph class and its methods.
+   
+      **B. Compile your source code**:
+       You can compile your source files using a C++ compiler like g++. Here's an example of compiling the files:
 
-## B. Compile your source code:
+       ```bash
+         g++ -std=c++11 -I./include -o main src/main.cpp src/graph.cpp
+         ```
+   
 
-You can compile your source files using a C++ compiler like g++. Here's an example of compiling the files without using CMake:
-  ```bash
-    g++ -std=c++11 -I./include -o main src/main.cpp src/graph.cpp
-```
+   This command does the following:
 
-This command does the following:
+   -I./include: Specifies the include directory where the header files are located.
+   
+   -o main: Specifies the output executable name (in this case, main).
+   
+   src/main.cpp and src/graph.cpp: The source files you want to compile.
+   
+    **C. Run the executable**:
+    After compiling, you can run the generated executable:
 
--I./include: Specifies the include directory where the header files are located.
--o main: Specifies the output executable name (in this case, main).
-src/main.cpp and src/graph.cpp: The source files you want to compile.
-
-## C. Run the executable:
-
-After compiling, you can run the generated executable:
-
-```bash
-./main
-```
+   ```bash
+   ./main
+   ```
 
 Example for creating a graph and performing BFS:
   ```cpp
